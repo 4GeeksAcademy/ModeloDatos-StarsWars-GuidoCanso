@@ -3,8 +3,7 @@ import sys
 from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
 from sqlalchemy.orm import relationship, declarative_base
 from datetime import datetime
-from eralchemy2 import render_er
-from src.models import Base
+
 
 
 Base = declarative_base()
@@ -66,4 +65,4 @@ class FavoriteCharacter(Base):
     character = relationship("Character", back_populates="favorites")
 
 
-render_er(Base, 'diagram.png')
+
